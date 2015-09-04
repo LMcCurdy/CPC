@@ -1,0 +1,1012 @@
+// colors =============================================== colors ===============================================
+
+$orange		: #fd6b35;
+$blue		: #275598;
+$white		: #ffffff;
+$blue-o     : rgba(39, 85, 152, 0.9);
+$orange-o   : rgba(253, 107, 53, 0.9);
+$gray       : #cccccc;
+// fonts ======================================= fonts =======================================
+
+@font-face {
+	font-family: 'Cambria';
+	src: url('../fonts/Cambria.eot');
+	src: local('☺'),
+		 url('../fonts/Cambria.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Cambria.woff') format('woff'), 
+		 url('../fonts/Cambria.ttf') format('truetype'), 
+		 url('../fonts/Cambria.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+$fontreg : 'Cambria', sans-serif;
+
+@font-face {
+    font-family: 'FranklinGothicBook';
+    src: url('../fonts/FranklinGothic-Book-webfont.eot');
+    src: local('☺'),
+    	 url('../fonts/FranklinGothic-Book-webfont.eot?iefix') format('eot'),
+         url('../fonts/FranklinGothic-Book-webfont.woff') format('woff'),
+         url('../fonts/FranklinGothic-Book-webfont.ttf') format('truetype'),
+         url('../fonts/FranklinGothic-Book-webfont.svg#webfonta9oqws39') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$fontbook : 'FranklinGothicBook';
+
+@font-face {
+    font-family: 'FranklinGothicDemi';
+    src: url('../fonts/FranklinGothic-Demi-webfont.eot');
+    src: local('☺'),
+    	 url('../fonts/FranklinGothic-Demi-webfont.eot?iefix') format('eot'),
+         url('../fonts/FranklinGothic-Demi-webfont.woff') format('woff'),
+         url('../fonts/FranklinGothic-Demi-webfont.ttf') format('truetype'),
+         url('../fonts/FranklinGothic-Demi-webfont.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$fontdemi : 'FranklinGothicDemi';
+
+body * {
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+
+// header - home ======================================= header - home =======================================
+body, html { 
+	height:100%; 
+	padding:0; 
+	margin:0;
+	margin-top: 0 !important;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $fontdemi;
+}
+
+p, ul, li, a {
+    font-family: $fontreg;
+}
+
+header {
+	background-image: url('../images/kid-header.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    background-position: center;
+
+	h1 {
+		color: $white;
+		text-transform: uppercase;
+		display: block;
+		width: 100%;
+        padding: 0 15px;
+		margin: auto;
+		text-align: center;
+		font-size: 70px;
+		left: 0;
+		right: 0;
+        position: absolute;
+        top: 35%;
+        -webkit-transform: translateY(-35%);
+        -ms-transform: translateY(-35%);
+        transform: translateY(-35%);
+	} 
+
+	div#headstick {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+            z-index: 500;
+
+            div.logo {
+            background-image: url("../images/logo.png");
+            height: 200px;
+            width: 270px;
+            background-size: 85%;
+            position: absolute;
+            left: 0;
+            z-index: 100;
+            top: -75px;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        &.stickyness {
+            height: 124px;
+            div.logo {
+                top: 40px;
+                height: 85px;
+                background-image: url("../images/logo-flat.jpg");
+                background-size: 100%;
+                background-position: center;
+            }
+        } //end of stickyness
+	} // end of headstick
+
+	nav {
+		width: 100%;
+		z-index: 99;
+		text-align: right;
+
+        ul li {
+            display: inline-block;
+
+            .sub-menu {
+                display: none;
+
+               li .sub-menu {
+                    display: none;
+                }
+            }
+
+             &:hover {
+                .sub-menu {
+                    position: absolute;
+                    text-align: right;
+                    display: block;
+                    left: 0;
+                    width: 100%;
+                    padding: 0 15px;
+                    background-color: $orange;
+
+                    li {
+                        display: inline-block;
+
+                    }
+                }
+            }      
+        }
+
+        a {
+            text-decoration: none;
+            font-family: $fontdemi;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        &.main {
+            background-color: $white;
+            -webkit-box-shadow: 0px 3px 5px 0px rgba(219,219,219,1);
+            -moz-box-shadow: 0px 3px 5px 0px rgba(219,219,219,1);
+            box-shadow: 0px 3px 5px 0px rgba(219,219,219,1);
+            padding: 0 20px;
+
+
+            li {
+                font-size: 18px;
+                padding: 30px 10px;
+
+                a {
+                    color: $blue;
+                }
+
+                &:hover {
+                    background-color:$orange;
+                    
+                    a {
+                        color: $white;
+                    }
+
+                    .sub-menu {
+                        display: block;
+                        margin-top: 30px;
+                        box-shadow: 0px 3px 3px 0px rgba(43, 66, 74, 0.4); // GEORGES BOX SHADOW ;)
+
+
+                        li {
+                            padding: 20px 10px;
+                            font-size: 14px;
+
+                            .sub-menu {
+                                display: none;
+                            }
+
+                            &:hover {
+                                background-color: $blue;
+
+                                .sub-menu {
+                                    position: absolute;
+                                    display: block;
+                                    left: 0;
+                                    margin-top: 20px;
+                                    background-color: $blue;
+                                    padding: 15px 0 5px 0;
+                                    text-align: center;
+
+                                    li {
+                                        background-repeat: no-repeat;
+                                        background-position: center 5px;
+                                        padding: 60px 30px 15px;
+                                        background-size: 50px;
+                                        &.case-management {
+                                            background-image: url('../images/case-management.svg');
+                                        }
+                                        &.work-ready {
+                                            background-image: url('../images/work-ready.svg');
+                                        }
+                                         &.early-head-start {
+                                            background-image: url('../images/head-start.svg');
+                                        }
+                                         &.foster-program {
+                                            background-image: url('../images/foster.svg');
+                                        }
+                                         &.head-start {
+                                            background-image: url('../images/head-start-york.svg');
+                                        }
+                                         &.pre-k {
+                                            background-image: url('../images/pre-k.svg');
+                                        }
+                                         &.houseing-counseling {
+                                            background-image: url('../images/house-co.svg');
+                                        }
+                                         &.rental-assistance {
+                                            background-image: url('../images/housing.svg');
+                                        }
+                                         &.yha {
+                                            background-image: url('../images/home.svg');
+                                        }
+                                         &.community-centers {
+                                            background-image: url('../images/community.svg');
+                                        }
+                                         &.wic {
+                                            background-image: url('../images/wic.svg');
+                                        }
+
+                                        &:hover {
+                                            a {
+                                                opacity: .7;
+                                            }
+                                        }
+
+                                        a {
+                                            color: $white;
+                                        }
+                                    }
+                                }
+
+                                a {
+                                    color: $white;
+                                }
+                            } // end of &hover
+                        } // end of li
+                    } //end of sub-menu
+                } // end of &hover
+            } // end of li
+        }  //end of .main  
+
+        &.mini {
+            background-color: $orange;
+            padding-right: 20px;
+
+            a { 
+                color: $white; 
+                font-size: 13px;
+                padding: 10px;
+                background-color: $orange;
+
+                &:hover {
+                    background-color:$white;
+                    color: $orange;
+                }
+            }
+
+            .donate-button {
+                a {
+                background-color: $blue !important;
+
+                &:hover {
+                    background-color: $white !important;
+                }
+                }
+            }
+        } //end of .mini 
+
+    } // nav closing
+
+
+
+    div.menu-btn { 
+    	display: none; 
+    }
+
+
+} // header closing
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++ MOBILE NAV MOBILE NAV +++++++++++++++++++++++++++++++++++
+
+.pushy {
+    div#logo {
+        padding: 0 15px;
+        margin: 0 0 10px 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .icons {
+        text-align: center;
+        margin: 20px 0;
+        i {
+            font-size: 25px;
+            color: $orange;
+            margin: 0 15px;
+        }
+    }
+    ul {
+        li {
+            &.mobile-toggle {
+                position: relative;
+                .sub-menu {
+                    a {
+                        color: $white;
+                        background-color: $blue;
+
+                        &:hover {
+                            background-color: $orange;
+                        }
+                    }
+                }
+                span.m-drop {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 51px;
+                    background-color: $blue;
+                    width: 50px;
+                    padding: 13px 0 0 20px;
+                    font-size: 20px;
+                    color: #fff;
+                }
+            }    
+        }
+    }
+}// end of pushy
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++ MOBILE NAV MOBILE NAV +++++++++++++++++++++++++++++++++++
+
+/* ************************************** HEADER HEADER HEADER ******************************************
+                              ___  __             __        ___  __     ___  __  
+                        |\/| |__  |  \ |  /\     /  \ |  | |__  |__) | |__  /__` 
+                        |  | |___ |__/ | /~~\    \__X \__/ |___ |  \ | |___ .__/ 
+                                                                              
+************************************** HEADER HEADER HEADER ****************************************** */ 
+@media only screen and (max-width: 1050px)  {
+    header {
+        nav {
+            &.main {
+                li {
+                    &:hover {
+                        .sub-menu {
+                            li {
+                                padding: 20px 5px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}// end of 1050    
+
+
+@media only screen and (max-width: 960px)  {
+    header {
+        h1 {
+            font-size: 60px;
+        }
+        div#headstick {
+            div.logo {
+                    top: -115px;
+                }
+
+            &.stickyness {
+                div.logo {
+                    top: 0px;
+                }
+            }
+        }
+        nav {
+            &.mini {
+                display: none;
+            } //end &.mini
+            &.main {
+                .desktopnav {
+                    display: none;
+                }
+                div.menu-btn {
+                    display: block;
+                    padding: 30px 10px;
+                    color: $blue;
+                    font-family: $fontdemi;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+            }//end main
+        }//end nav
+    }//end header
+} //end 960
+
+@media only screen and (max-width: 915px)  {
+    header {
+        h1 {
+            font-size: 60px;
+        }//h1
+    }//header
+}// end of 915
+
+@media only screen and (max-width: 790px)  {
+    header {
+        h1 {
+            font-size: 53px;
+        }//h1
+    }//header
+}// end of 790
+
+@media only screen and (max-width: 500px)  {
+    header {
+        background-size: 1200px;
+        background-position: -530px;
+        
+        h1 {
+            font-size: 40px;
+        }//h1
+    }//header
+}// end of 500
+
+@media only screen and (max-width: 375px)  {
+    header {
+        background-position: -620px 0px;
+        h1 {
+            font-size: 35px; 
+        } // end of h1 
+        div#headstick {
+            div.logo {
+            width: 230px;
+            top: -100px;
+            background-position: left;
+            } // end of logo
+        }// end of #headstick
+    } //end of header     
+} // end of 375  
+
+
+@media only screen and (max-width: 320px)  {
+    header {
+            
+        h1 {
+            font-size: 25px;
+            
+        } // end of h1 
+
+        div#headstick {
+            div.logo {
+                width: 170px;
+                background-size: 100%;
+            } // end of logo
+        }// end of #headstick
+    } //end of header     
+} // end of 320 
+
+
+// footer ======================================= footer =======================================
+
+footer {
+    background-color: $orange;
+    padding: 20px 0 0 0;
+
+    h5 {
+        color: $white;
+        text-align: center;
+        position: relative;
+        font-size: 15px;
+
+        &:after {
+            content: '';
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            background-color: $white;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 20px;
+        }
+    } // end of h5
+
+    ul, li, a {
+        color: $white;
+        text-decoration: none;
+        list-style: none;
+        font-size: 12px;
+    } //end of ul li a
+
+    a.facebook-button {
+        background-color: $white;
+        width: 100%;
+        display: inline-block;
+        padding: 8px;
+        margin-top: 20px;
+        border-radius: 20px;
+        text-align: center;
+        color: $orange;
+        font-family: $fontdemi;
+        border: 2px solid $white;
+
+        &:hover {
+            background-color: $orange;
+            color: $white;
+
+            .fa-facebook {
+                color: $orange;
+
+                &:before {
+                    background-color: $white;
+                }
+            } // end of hover:fa-facebook
+        }// :hover
+
+        .fa-facebook {
+            color: $white;
+
+            &:before {
+                background-color: $orange;
+                height: 20px;
+                width: 20px;
+                border-radius: 10px;
+                line-height: 20px;
+                display: block;
+                margin-right: 5px;
+            }
+        } //end .fa
+    } // end .facebook-button
+
+    .grid-2 {
+        .grid-half {
+             padding: 5px 10px 0 0;
+        }
+    }
+
+    div.copyright {
+        background-color: $white;
+        padding: 15px;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 12px;
+
+        p {
+            color: $blue;
+        }
+    }
+
+
+} //footer closing
+
+
+/* ************************************** FOOTER FOOTER FOOTER ******************************************
+                              ___  __             __        ___  __     ___  __  
+                        |\/| |__  |  \ |  /\     /  \ |  | |__  |__) | |__  /__` 
+                        |  | |___ |__/ | /~~\    \__X \__/ |___ |  \ | |___ .__/ 
+                                                                              
+************************************** FOOTER FOOTER FOOTER ****************************************** */ 
+
+@media only screen and (max-width: 900px)  {
+    footer {
+        .foot-wrap {
+            width: 520px;
+            margin: 0 auto;
+        }
+        .grid-2 {
+            width: 100%;
+            margin: 0 0 80px 0 !important;
+        }
+    } // end of footer
+}// end of 900
+
+@media only screen and (max-width: 550px)  {
+    footer {
+        .foot-wrap {
+            width: 100%;
+            padding: 0 15px;
+        }
+    } // end of footer
+}// end of 550
+
+@media only screen and (max-width: 475px)  {
+    footer {
+        ul, li, a {
+        text-align:center;
+        } //end of ul li a 
+    } //end of footer     
+} // end of 475  
+
+@media only screen and (max-width: 400px)  {
+    .copyright {
+        span {
+            display: block;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 375px)  {
+    footer {
+        .grid-2 {
+            margin: 0 0 40px 0 !important;
+        } //grid-2
+    } //end of footer     
+} // end of 375 
+
+
+
+// home page ======================================= home page =======================================
+
+div#home-page {
+    div.contain {
+        margin: 100px 0;
+        h2 {
+            font-family: $fontdemi;
+            text-transform: uppercase;
+            color: $blue;
+            font-size: 17px;
+            position: relative;
+            text-align: center;
+            &:after {
+                content: '';
+                height: 3px;
+                width: 20%;
+                position: absolute;
+                background-color: $orange;
+                left: 0;
+                right: 0;
+                bottom: -3px;
+                margin: auto;
+            }//end of after
+        }//end of h2
+        p {
+            color: $blue;
+            font-family: $fontdemi;
+            font-size: 25px;
+            padding: 40px 15px;
+            max-width: 850px;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        }// end of p
+        a {
+            color: $white;
+            background-color: $orange;
+            font-family: $fontdemi;
+            text-transform: uppercase;
+            width: 320px;
+            padding: 5px 15px;
+            font-size: 12px;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid $orange;
+            text-decoration: none;
+            display: block;
+            margin: 0 auto;
+            &:hover {
+                background-color: $white;
+                color: $orange;
+            }//hover
+        }//a
+    }//.contain
+    div.bricks {
+        .block {
+            min-height: 350px;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            .blur {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: $orange-o;
+                bottom: -313px;
+                transition: all 0.5s ease;
+                padding: 0 15px;
+
+                h4 {
+                    font-family: $fontdemi;
+                    text-transform: uppercase;
+                    color: $white;
+                    text-align: center;
+                    padding: 10px 0;
+                    width: 100%;
+                    font-size: 14px;
+                }
+
+                hr {
+                    border: 0;
+                    height: 3px;
+                    background: $white;
+                    margin: 1px 0 11px 0;
+                }
+
+                p {
+                    color: $white;
+                    padding: 0 0 15px 0;
+                    font-size: 15px;
+                } 
+
+                ul {
+                    color: $white;
+                    padding: 0 0 25px 25px;
+                    font-size: 15px;
+                }
+
+                a {
+                    color: $orange;
+                    background-color: $white;
+                    font-family: "FranklinGothicDemi";
+                    text-transform: uppercase;
+                    width: 75%;
+                    padding: 5px 15px;
+                    font-size: 11px;
+                    text-align: center;
+                    border-radius: 20px;
+                    text-decoration: none;
+                    display: block;
+                    margin: 0 auto;
+                    border: 2px solid $white;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $white;
+                    }
+                }
+            }
+            &:hover {
+                .blur {
+                    bottom: 0;
+                }
+            }
+
+            & + .block {
+
+                .blur {
+                    background-color: $blue-o;
+
+                    a {
+                        color: $blue;
+
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+                
+                & + .block {  
+                    
+                    .blur {
+                        background-color: $orange-o;
+
+                        a {
+                            color: $orange;
+
+                            &:hover {
+                                color: $white;
+                            }
+                        }
+                    }    
+
+                    & + .block {
+
+                    .blur {
+                        background-color: $blue-o;
+
+                        a {
+                            color: $blue;
+
+                            &:hover {
+                                color: $white;
+                            }
+                        }
+                    }   
+                    
+                    }//block 4
+                }// block 3
+            }// block 2
+        }//.block
+    }//bricks
+
+    div.donate {
+        height: 700px;
+        background-image: url('../images/donate-back.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        &:before {
+            content: '\f155';
+            font-family: 'FontAwesome';
+            position: absolute;
+            color: $blue;
+            background-color: $white;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            top: -50px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        } //before
+        h3 {
+            font-size: 25px;
+            font-family: $fontdemi;
+            text-transform: uppercase;
+            color: $white;
+            text-align: center;
+        }
+        p {
+            padding: 40px 15px;
+            max-width: 850px;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            color: $white;
+        }
+        a {
+            color: $blue;
+            background-color: $white;
+            font-family: $fontdemi;
+            text-transform: uppercase;
+            width: 320px;
+            padding: 5px 15px;
+            font-size: 12px;
+            text-align: center;
+            border-radius: 20px;
+            text-decoration: none;
+            display: block;
+            margin: 0 auto;
+            &:hover {
+                background-color: $blue;
+                color: $white;
+            }//hover
+        }//a
+        div {
+            position: relative;
+            top: 45%;
+            -webkit-transform: translateY(-45%);
+            -ms-transform: translateY(-45%);
+            transform: translateY(-45%);
+        }
+    }//donate
+}//end of home-page
+
+
+/* ************************************** HOME PAGE HOME PAGE HOME PAGE ******************************************
+                              ___  __             __        ___  __     ___  __  
+                        |\/| |__  |  \ |  /\     /  \ |  | |__  |__) | |__  /__` 
+                        |  | |___ |__/ | /~~\    \__X \__/ |___ |  \ | |___ .__/ 
+                                                                              
+************************************** HOME PAGE HOME PAGE HOME PAGE ****************************************** */ 
+
+
+@media only screen and (max-width: 960px)  {    
+    div#home-page {
+        div.bricks {
+            .block {
+               & + .block {    
+                & + .block {     
+                    .blur {
+                        background-color: $blue-o;
+                        a {
+                            color: $blue;
+                        }
+                    }//blur    
+                        & + .block {
+                        .blur {
+                            background-color: $orange-o;
+                            a {
+                                color: $orange;
+                            }
+                        }//blur     
+                    }//block 4
+                }// block 3
+            }// block 2
+        }
+    }
+
+        .grid-25.no-margin {
+            width: 50%;
+        }
+    }
+}//960
+
+
+@media only screen and (max-width: 639px)  {    
+    div#home-page {
+        div.contain {
+            margin: 40px 0;
+            }
+        div.donate {
+            margin: 100px 0 0 0;
+            height: auto;
+            padding: 220px 0 0 0;
+            }            
+        div.bricks {
+            .block {
+               & + .block {    
+                & + .block {     
+                    .blur {
+                        background-color: $orange-o;
+                        a {
+                            color: $orange;
+                        }
+                    }//blur    
+                        & + .block {
+                        .blur {
+                            background-color: $blue-o;
+                            a {
+                                color: $blue;
+                            }
+                        }//blur     
+                    }//block 4
+                }// block 3
+            }// block 2
+        }
+    }
+
+        .grid-25.no-margin {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}//960
+
+@media only screen and (max-width: 375px)  {
+    div#home-page {
+        div.donate {
+            h3 {
+                padding: 0 10px;
+            }
+            div {
+                top: 30%;
+                -webkit-transform: translateY(-30%);
+                -ms-transform: translateY(-30%);
+                transform: translateY(-30%);
+            }
+        }//donate
+        div.contain {
+            p {
+                font-size: 22px;
+                padding: 40px 30px;
+            }
+            h2 {
+                &:after {
+                    width: 60%;
+                }
+            }
+        }
+    }//home
+}//375
+
+@media only screen and (max-width: 320px)  {
+    div#home-page {
+        div.contain {
+            a {
+                width: 280px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+        div.donate {
+            a {
+                width: 280px;
+            }
+        }
+    }
+}        

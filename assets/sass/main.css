@@ -1,0 +1,864 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Cambria';
+  src: url("../fonts/Cambria.eot");
+  src: local("☺"), url("../fonts/Cambria.eot?#iefix") format("embedded-opentype"), url("../fonts/Cambria.woff") format("woff"), url("../fonts/Cambria.ttf") format("truetype"), url("../fonts/Cambria.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FranklinGothicBook';
+  src: url("../fonts/FranklinGothic-Book-webfont.eot");
+  src: local("☺"), url("../fonts/FranklinGothic-Book-webfont.eot?iefix") format("eot"), url("../fonts/FranklinGothic-Book-webfont.woff") format("woff"), url("../fonts/FranklinGothic-Book-webfont.ttf") format("truetype"), url("../fonts/FranklinGothic-Book-webfont.svg#webfonta9oqws39") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FranklinGothicDemi';
+  src: url("../fonts/FranklinGothic-Demi-webfont.eot");
+  src: local("☺"), url("../fonts/FranklinGothic-Demi-webfont.eot?iefix") format("eot"), url("../fonts/FranklinGothic-Demi-webfont.woff") format("woff"), url("../fonts/FranklinGothic-Demi-webfont.ttf") format("truetype"), url("../fonts/FranklinGothic-Demi-webfont.svg#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body * {
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 0 !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "FranklinGothicDemi";
+}
+
+p, ul, li, a {
+  font-family: "Cambria", sans-serif;
+}
+
+header {
+  background-image: url("../images/kid-header.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+  background-position: center;
+}
+
+header h1 {
+  color: #ffffff;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  margin: auto;
+  text-align: center;
+  font-size: 70px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 35%;
+  -webkit-transform: translateY(-35%);
+  -ms-transform: translateY(-35%);
+  transform: translateY(-35%);
+}
+
+header div#headstick {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 500;
+}
+
+header div#headstick div.logo {
+  background-image: url("../images/logo.png");
+  height: 200px;
+  width: 270px;
+  background-size: 85%;
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  top: -75px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+header div#headstick.stickyness {
+  height: 124px;
+}
+
+header div#headstick.stickyness div.logo {
+  top: 40px;
+  height: 85px;
+  background-image: url("../images/logo-flat.jpg");
+  background-size: 100%;
+  background-position: center;
+}
+
+header nav {
+  width: 100%;
+  z-index: 99;
+  text-align: right;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li .sub-menu {
+  display: none;
+}
+
+header nav ul li .sub-menu li .sub-menu {
+  display: none;
+}
+
+header nav ul li:hover .sub-menu {
+  position: absolute;
+  text-align: right;
+  display: block;
+  left: 0;
+  width: 100%;
+  padding: 0 15px;
+  background-color: #fd6b35;
+}
+
+header nav ul li:hover .sub-menu li {
+  display: inline-block;
+}
+
+header nav a {
+  text-decoration: none;
+  font-family: "FranklinGothicDemi";
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+header nav.main {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 3px 5px 0px #dbdbdb;
+  -moz-box-shadow: 0px 3px 5px 0px #dbdbdb;
+  box-shadow: 0px 3px 5px 0px #dbdbdb;
+  padding: 0 20px;
+}
+
+header nav.main li {
+  font-size: 18px;
+  padding: 30px 10px;
+}
+
+header nav.main li a {
+  color: #275598;
+}
+
+header nav.main li:hover {
+  background-color: #fd6b35;
+}
+
+header nav.main li:hover a {
+  color: #ffffff;
+}
+
+header nav.main li:hover .sub-menu {
+  display: block;
+  margin-top: 30px;
+  box-shadow: 0px 3px 3px 0px rgba(43, 66, 74, 0.4);
+}
+
+header nav.main li:hover .sub-menu li {
+  padding: 20px 10px;
+  font-size: 14px;
+}
+
+header nav.main li:hover .sub-menu li .sub-menu {
+  display: none;
+}
+
+header nav.main li:hover .sub-menu li:hover {
+  background-color: #275598;
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu {
+  position: absolute;
+  display: block;
+  left: 0;
+  margin-top: 20px;
+  background-color: #275598;
+  padding: 15px 0 5px 0;
+  text-align: center;
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li {
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  padding: 60px 30px 15px;
+  background-size: 50px;
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.case-management {
+  background-image: url("../images/case-management.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.work-ready {
+  background-image: url("../images/work-ready.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.early-head-start {
+  background-image: url("../images/head-start.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.foster-program {
+  background-image: url("../images/foster.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.head-start {
+  background-image: url("../images/head-start-york.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.pre-k {
+  background-image: url("../images/pre-k.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.houseing-counseling {
+  background-image: url("../images/house-co.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.rental-assistance {
+  background-image: url("../images/housing.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.yha {
+  background-image: url("../images/home.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.community-centers {
+  background-image: url("../images/community.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li.wic {
+  background-image: url("../images/wic.svg");
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li:hover a {
+  opacity: .7;
+}
+
+header nav.main li:hover .sub-menu li:hover .sub-menu li a {
+  color: #ffffff;
+}
+
+header nav.main li:hover .sub-menu li:hover a {
+  color: #ffffff;
+}
+
+header nav.mini {
+  background-color: #fd6b35;
+  padding-right: 20px;
+}
+
+header nav.mini a {
+  color: #ffffff;
+  font-size: 13px;
+  padding: 10px;
+  background-color: #fd6b35;
+}
+
+header nav.mini a:hover {
+  background-color: #ffffff;
+  color: #fd6b35;
+}
+
+header nav.mini .donate-button a {
+  background-color: #275598 !important;
+}
+
+header nav.mini .donate-button a:hover {
+  background-color: #ffffff !important;
+}
+
+header div.menu-btn {
+  display: none;
+}
+
+.pushy div#logo {
+  padding: 0 15px;
+  margin: 0 0 10px 0;
+}
+
+.pushy div#logo img {
+  width: 100%;
+  height: auto;
+}
+
+.pushy .icons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pushy .icons i {
+  font-size: 25px;
+  color: #fd6b35;
+  margin: 0 15px;
+}
+
+.pushy ul li.mobile-toggle {
+  position: relative;
+}
+
+.pushy ul li.mobile-toggle .sub-menu a {
+  color: #ffffff;
+  background-color: #275598;
+}
+
+.pushy ul li.mobile-toggle .sub-menu a:hover {
+  background-color: #fd6b35;
+}
+
+.pushy ul li.mobile-toggle span.m-drop {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 51px;
+  background-color: #275598;
+  width: 50px;
+  padding: 13px 0 0 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* ************************************** HEADER HEADER HEADER ******************************************
+                              ___  __             __        ___  __     ___  __  
+                        |\/| |__  |  \ |  /\     /  \ |  | |__  |__) | |__  /__` 
+                        |  | |___ |__/ | /~~\    \__X \__/ |___ |  \ | |___ .__/ 
+                                                                              
+************************************** HEADER HEADER HEADER ****************************************** */
+@media only screen and (max-width: 1050px) {
+  header nav.main li:hover .sub-menu li {
+    padding: 20px 5px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  header h1 {
+    font-size: 60px;
+  }
+  header div#headstick div.logo {
+    top: -115px;
+  }
+  header div#headstick.stickyness div.logo {
+    top: 0px;
+  }
+  header nav.mini {
+    display: none;
+  }
+  header nav.main .desktopnav {
+    display: none;
+  }
+  header nav.main div.menu-btn {
+    display: block;
+    padding: 30px 10px;
+    color: #275598;
+    font-family: "FranklinGothicDemi";
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  header h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  header h1 {
+    font-size: 53px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    background-size: 1200px;
+    background-position: -530px;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  header {
+    background-position: -620px 0px;
+  }
+  header h1 {
+    font-size: 35px;
+  }
+  header div#headstick div.logo {
+    width: 230px;
+    top: -100px;
+    background-position: left;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  header h1 {
+    font-size: 25px;
+  }
+  header div#headstick div.logo {
+    width: 170px;
+    background-size: 100%;
+  }
+}
+
+footer {
+  background-color: #fd6b35;
+  padding: 20px 0 0 0;
+}
+
+footer h5 {
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  font-size: 15px;
+}
+
+footer h5:after {
+  content: '';
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 20px;
+}
+
+footer ul, footer li, footer a {
+  color: #ffffff;
+  text-decoration: none;
+  list-style: none;
+  font-size: 12px;
+}
+
+footer a.facebook-button {
+  background-color: #ffffff;
+  width: 100%;
+  display: inline-block;
+  padding: 8px;
+  margin-top: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fd6b35;
+  font-family: "FranklinGothicDemi";
+  border: 2px solid #ffffff;
+}
+
+footer a.facebook-button:hover {
+  background-color: #fd6b35;
+  color: #ffffff;
+}
+
+footer a.facebook-button:hover .fa-facebook {
+  color: #fd6b35;
+}
+
+footer a.facebook-button:hover .fa-facebook:before {
+  background-color: #ffffff;
+}
+
+footer a.facebook-button .fa-facebook {
+  color: #ffffff;
+}
+
+footer a.facebook-button .fa-facebook:before {
+  background-color: #fd6b35;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  line-height: 20px;
+  display: block;
+  margin-right: 5px;
+}
+
+footer .grid-2 .grid-half {
+  padding: 5px 10px 0 0;
+}
+
+footer div.copyright {
+  background-color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+}
+
+footer div.copyright p {
+  color: #275598;
+}
+
+/* ************************************** FOOTER FOOTER FOOTER ******************************************
+                              ___  __             __        ___  __     ___  __  
+                        |\/| |__  |  \ |  /\     /  \ |  | |__  |__) | |__  /__` 
+                        |  | |___ |__/ | /~~\    \__X \__/ |___ |  \ | |___ .__/ 
+                                                                              
+************************************** FOOTER FOOTER FOOTER ****************************************** */
+@media only screen and (max-width: 900px) {
+  footer .foot-wrap {
+    width: 520px;
+    margin: 0 auto;
+  }
+  footer .grid-2 {
+    width: 100%;
+    margin: 0 0 80px 0 !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  footer .foot-wrap {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  footer ul, footer li, footer a {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .copyright span {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  footer .grid-2 {
+    margin: 0 0 40px 0 !important;
+  }
+}
+
+div#home-page div.contain {
+  margin: 100px 0;
+}
+
+div#home-page div.contain h2 {
+  font-family: "FranklinGothicDemi";
+  text-transform: uppercase;
+  color: #275598;
+  font-size: 17px;
+  position: relative;
+  text-align: center;
+}
+
+div#home-page div.contain h2:after {
+  content: '';
+  height: 3px;
+  width: 20%;
+  position: absolute;
+  background-color: #fd6b35;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  margin: auto;
+}
+
+div#home-page div.contain p {
+  color: #275598;
+  font-family: "FranklinGothicDemi";
+  font-size: 25px;
+  padding: 40px 15px;
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+div#home-page div.contain a {
+  color: #ffffff;
+  background-color: #fd6b35;
+  font-family: "FranklinGothicDemi";
+  text-transform: uppercase;
+  width: 320px;
+  padding: 5px 15px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid #fd6b35;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+}
+
+div#home-page div.contain a:hover {
+  background-color: #ffffff;
+  color: #fd6b35;
+}
+
+div#home-page div.bricks .block {
+  min-height: 350px;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+div#home-page div.bricks .block .blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(253, 107, 53, 0.9);
+  bottom: -313px;
+  transition: all 0.5s ease;
+  padding: 0 15px;
+}
+
+div#home-page div.bricks .block .blur h4 {
+  font-family: "FranklinGothicDemi";
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+div#home-page div.bricks .block .blur hr {
+  border: 0;
+  height: 3px;
+  background: #ffffff;
+  margin: 1px 0 11px 0;
+}
+
+div#home-page div.bricks .block .blur p {
+  color: #ffffff;
+  padding: 0 0 15px 0;
+  font-size: 15px;
+}
+
+div#home-page div.bricks .block .blur ul {
+  color: #ffffff;
+  padding: 0 0 25px 25px;
+  font-size: 15px;
+}
+
+div#home-page div.bricks .block .blur a {
+  color: #fd6b35;
+  background-color: #ffffff;
+  font-family: "FranklinGothicDemi";
+  text-transform: uppercase;
+  width: 75%;
+  padding: 5px 15px;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #ffffff;
+}
+
+div#home-page div.bricks .block .blur a:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+div#home-page div.bricks .block:hover .blur {
+  bottom: 0;
+}
+
+div#home-page div.bricks .block + .block .blur {
+  background-color: rgba(39, 85, 152, 0.9);
+}
+
+div#home-page div.bricks .block + .block .blur a {
+  color: #275598;
+}
+
+div#home-page div.bricks .block + .block .blur a:hover {
+  color: #ffffff;
+}
+
+div#home-page div.bricks .block + .block + .block .blur {
+  background-color: rgba(253, 107, 53, 0.9);
+}
+
+div#home-page div.bricks .block + .block + .block .blur a {
+  color: #fd6b35;
+}
+
+div#home-page div.bricks .block + .block + .block .blur a:hover {
+  color: #ffffff;
+}
+
+div#home-page div.bricks .block + .block + .block + .block .blur {
+  background-color: rgba(39, 85, 152, 0.9);
+}
+
+div#home-page div.bricks .block + .block + .block + .block .blur a {
+  color: #275598;
+}
+
+div#home-page div.bricks .block + .block + .block + .block .blur a:hover {
+  color: #ffffff;
+}
+
+div#home-page div.donate {
+  height: 700px;
+  background-image: url("../images/donate-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+div#home-page div.donate:before {
+  content: '\f155';
+  font-family: 'FontAwesome';
+  position: absolute;
+  color: #275598;
+  background-color: #ffffff;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;
+  top: -50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+div#home-page div.donate h3 {
+  font-size: 25px;
+  font-family: "FranklinGothicDemi";
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+div#home-page div.donate p {
+  padding: 40px 15px;
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+div#home-page div.donate a {
+  color: #275598;
+  background-color: #ffffff;
+  font-family: "FranklinGothicDemi";
+  text-transform: uppercase;
+  width: 320px;
+  padding: 5px 15px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+}
+
+div#home-page div.donate a:hover {
+  background-color: #275598;
+  color: #ffffff;
+}
+
+div#home-page div.donate div {
+  position: relative;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
+
+/* ************************************** HOME PAGE HOME PAGE HOME PAGE ******************************************
+                              ___  __             __        ___  __     ___  __  
+                        |\/| |__  |  \ |  /\     /  \ |  | |__  |__) | |__  /__` 
+                        |  | |___ |__/ | /~~\    \__X \__/ |___ |  \ | |___ .__/ 
+                                                                              
+************************************** HOME PAGE HOME PAGE HOME PAGE ****************************************** */
+@media only screen and (max-width: 960px) {
+  div#home-page div.bricks .block + .block + .block .blur {
+    background-color: rgba(39, 85, 152, 0.9);
+  }
+  div#home-page div.bricks .block + .block + .block .blur a {
+    color: #275598;
+  }
+  div#home-page div.bricks .block + .block + .block + .block .blur {
+    background-color: rgba(253, 107, 53, 0.9);
+  }
+  div#home-page div.bricks .block + .block + .block + .block .blur a {
+    color: #fd6b35;
+  }
+  div#home-page .grid-25.no-margin {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  div#home-page div.contain {
+    margin: 40px 0;
+  }
+  div#home-page div.donate {
+    margin: 100px 0 0 0;
+    height: auto;
+    padding: 220px 0 0 0;
+  }
+  div#home-page div.bricks .block + .block + .block .blur {
+    background-color: rgba(253, 107, 53, 0.9);
+  }
+  div#home-page div.bricks .block + .block + .block .blur a {
+    color: #fd6b35;
+  }
+  div#home-page div.bricks .block + .block + .block + .block .blur {
+    background-color: rgba(39, 85, 152, 0.9);
+  }
+  div#home-page div.bricks .block + .block + .block + .block .blur a {
+    color: #275598;
+  }
+  div#home-page .grid-25.no-margin {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  div#home-page div.donate h3 {
+    padding: 0 10px;
+  }
+  div#home-page div.donate div {
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    transform: translateY(-30%);
+  }
+  div#home-page div.contain p {
+    font-size: 22px;
+    padding: 40px 30px;
+  }
+  div#home-page div.contain h2:after {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  div#home-page div.contain a {
+    width: 280px;
+  }
+  div#home-page div.contain p {
+    font-size: 17px;
+  }
+  div#home-page div.donate a {
+    width: 280px;
+  }
+}
